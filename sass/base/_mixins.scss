@@ -1,0 +1,55 @@
+/*
+* Import mixin files
+*/
+@import "mixins/flexbox";
+
+// --------------------------------------------------
+// border-rad, box-shadow,
+// --------------------------------------------------
+
+@mixin br($border-radius: 5px) {
+    border-radius: $border-radius;
+}
+
+@mixin bs($x: 0, $y: 0, $b: 88px, $s: 4px, $c: rgba(#221f1f, 0.15)) {
+    box-shadow: $x $y $b $s $c;
+}
+
+// vertical - garadient
+@mixin bg-grad($start-color: #fbb615, $end-color: #cb2d2c) {
+    background: $start-color;
+    background: linear-gradient(to right, $start-color 0%, $end-color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 );
+}
+
+// --------------------------------------------------
+// border-rad, box-shadow,
+// --------------------------------------------------
+// fluid
+@mixin breakpoint-fluid($width) {
+    @media (min-width: $width) {
+        @content;
+    }
+}
+// screens
+@mixin breakpoint($class) {
+    @if $class == xs {
+        @media (max-width: 767px) {
+            @content;
+        }
+    } @else if $class == sm {
+        @media (min-width: 768px) {
+            @content;
+        }
+    } @else if $class == md {
+        @media (min-width: 992px) {
+            @content;
+        }
+    } @else if $class == lg {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}

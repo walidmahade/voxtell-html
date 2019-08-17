@@ -13,8 +13,10 @@
 @import "components/icons";
 @import "components/images";
 @import "components/modal";
+@import "components/hamburger-menu";
 
 /*================ Website sections ================*/
+@import "sections/top-bar";
 @import "sections/header";
 @import "sections/hero";
 @import "sections/inner-hero";
@@ -25,19 +27,19 @@
 @import "pages/contact";
 
 #brand {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  height: 100vh;
-  width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    width: 100vw;
 
-  img {
-    margin: 0 auto;
-    display: block;
-  }
+    img {
+        margin: 0 auto;
+        display: block;
+    }
 
-  p {
-    color: #999;
-  }
+    p {
+        color: #999;
+    }
 }

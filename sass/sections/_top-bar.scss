@@ -1,0 +1,44 @@
+#top-bar {
+    padding: 20px 0 0px 0;
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+    }
+
+    .row {
+        @include d(f);
+        @include jc(fe);
+        @include ai(c);
+    }
+
+    .number {
+        padding-left: 20px;
+
+        &__item {
+            @include d(f);
+            @include jc(c);
+            @include ai(c);
+            @include ac(c);
+            font-weight: 600;
+            font-size: 23px;
+            font-family: $font-heading;
+
+            small {
+                font-weight: 500;
+            }
+
+            &--small {
+                font-size: 15px;
+                svg {
+                    width: 14px;
+                }
+            }
+        }
+
+        .icon {
+            margin-bottom: -5px;
+            margin-right: 5px;
+        }
+    }
+}

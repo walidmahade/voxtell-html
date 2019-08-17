@@ -1,0 +1,124 @@
+// --------------------------------------------------
+// Flexbox SASS mixins
+// The spec: http://www.w3.org/TR/css3-flexbox
+// --------------------------------------------------
+
+// Flexbox display short
+@mixin dflex($display, $justify, $alit, $alcon, $fdr) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $alit;
+    align-content: $alcon;
+    flex-direction: $fdr;
+}
+
+// single
+@mixin d($d: flex) {
+    @if $d == f {
+        display: flex;
+    } @else if $d == if {
+        display: inline-flex;
+    } @else if $d == b {
+        display: block;
+    } @else if $d == ib {
+        display: inline-block;
+    } @else {
+        display: $d;
+    }
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+@mixin fd($direction) {
+    flex-direction: $direction;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+@mixin fw($wrap) {
+    flex-wrap: $wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+@mixin ff($flow) {
+    flex-flow: $flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+@mixin fo($val) {
+    order: $val;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+@mixin jc($justify) {
+    @if $justify == sb {
+        justify-content: space-between;
+    } @else if $justify == c {
+        justify-content: center;
+    } @else if $justify == fs {
+        justify-content: flex-start;
+    } @else if $justify == fe {
+        justify-content: flex-end;
+    } @else {
+        justify-content: $justify;
+    }
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+@mixin ac($align) {
+    @if $align == sb {
+        align-content: space-between;
+    } @else if $align == c {
+        align-content: center;
+    } @else if $align == fs {
+        align-content: flex-start;
+    } @else if $align == fe {
+        align-content: flex-end;
+    } @else {
+        align-content: $align;
+    }
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+@mixin ai($align) {
+    @if $align == sb {
+        align-items: space-between;
+    } @else if $align == c {
+        align-items: center;
+    } @else if $align == fs {
+        align-items: flex-start;
+    } @else if $align == fe {
+        align-items: flex-end;
+    } @else {
+        align-items: $align;
+    }
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+@mixin as($align) {
+    @if $align == sb {
+        align-self: space-between;
+    } @else if $align == c {
+        align-self: center;
+    } @else if $align == fs {
+        align-self: flex-start;
+    } @else if $align == fe {
+        align-self: flex-end;
+    } @else {
+        align-self: $align;
+    }
+}
