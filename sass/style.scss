@@ -14,16 +14,21 @@
 @import "components/images";
 @import "components/modal";
 @import "components/hamburger-menu";
+@import "components/testimonial-item";
+@import "components/page-title";
 
 /*================ Website sections ================*/
 @import "sections/top-bar";
 @import "sections/header";
 @import "sections/hero";
 @import "sections/inner-hero";
+@import "sections/icon-box";
 @import "sections/footer";
 
 /*================ Website Pages ================*/
+@import "pages/all-pages";
 @import "pages/home";
+@import "pages/our-sol";
 @import "pages/contact";
 
 #brand {

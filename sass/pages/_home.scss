@@ -1,0 +1,500 @@
+// ------------------------------ hero-home
+#hero-home {
+    text-align: center;
+    overflow: hidden;
+
+    // responsive styles
+    @include breakpoint(md) {
+        padding: 50px 0;
+        background-image: url("../images/homebanner-image.png");
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: 10% 100%;
+        text-align: left;
+    }
+
+    .row {
+        // responsive styles
+        @include breakpoint(md) {
+            @include ai(c);
+            @include ac(c);
+        }
+    }
+
+    // left col
+    .col-left {
+        @extend .w-100;
+        margin-bottom: 44px;
+        margin-top: 44px;
+
+        // responsive styles
+        @include breakpoint(md) {
+            width: 50%;
+        }
+    }
+
+    .title-big {
+        br {
+            display: none;
+        }
+
+        // responsive styles
+        @include breakpoint(md) {
+            br {
+                display: block;
+            }
+        }
+    }
+
+    .para {
+        margin: 25px 0 30px 0;
+    }
+
+    // right col
+    .col-right {
+        // margin-right: -200px;
+        @extend .w-100;
+
+        // responsive styles
+        @include breakpoint(md) {
+            width: 50%;
+        }
+    }
+
+    .hero-right-img {
+        padding-left: 50px;
+        display: block;
+        width: 100%;
+
+        // responsive styles
+        @include breakpoint(md) {
+            min-width: 775px;
+        }
+    }
+}
+
+// ------------------------------------------------------ one solution home
+#one-solution {
+    text-align: center;
+    background-image: url("../images/one-solution-bg-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 380px;
+    background-position: bottom center;
+    background-color: #eeeeee;
+    padding: 65px 0 415px 0;
+    z-index: 2;
+
+    // responsive styles
+    @include breakpoint(md) {
+        padding: 65px 0 120px 0;
+        background-image: url("../images/one-solution-bg-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: top left;
+        text-align: left;
+    }
+
+    .col {
+        // responsive styles
+        @include breakpoint(md) {
+            margin-left: 390px;
+        }
+    }
+
+    .para--subt {
+        padding: 20px 0;
+    }
+}
+
+// ------------------------------------------------ about us home
+#about-us {
+    .row {
+        &--icons {
+            padding: 30px 5px;
+            border-radius: 5px;
+            @include bs;
+            margin-top: -70px;
+            @include bgw;
+
+            // responsive styles
+            @include breakpoint(md) {
+                padding: 30px 15px;
+            }
+        }
+    }
+
+    .icons {
+        text-align: center;
+        padding: 0 10px;
+        width: 100%;
+
+        @include d(f);
+        @include jc(sb);
+        @include ai(c);
+        @include ac(c);
+        @include fw;
+
+        &__item {
+            width: 47%;
+            margin-bottom: 35px;
+
+            // responsive styles
+            @include breakpoint(sm) {
+                width: 33%;
+            }
+            @include breakpoint(md) {
+                width: auto;
+                margin-bottom: 0px;
+            }
+
+            &:last-child,
+            &:nth-last-child(2) {
+                margin-bottom: 0;
+            }
+
+            img {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+#about-us-2 {
+    overflow: hidden;
+    @include bgw;
+    padding: 40px 0 85px 0;
+
+    @include breakpoint(md) {
+        background-image: url(../images/how-it-works-bg.png);
+        background-position: -214px -200px;
+        background-repeat: no-repeat;
+        padding: 200px 0px 95px 0px;
+        margin-top: -150px;
+    }
+}
+
+// ----------------------------------- how we work
+#how-we-work {
+    padding-bottom: 35px;
+
+    @include breakpoint(md) {
+        padding: 85px 0 85px 0;
+    }
+
+    .row {
+    }
+
+    .icons {
+        padding: 15px 10px;
+        width: 100%;
+
+        @include d(f);
+        @include jc(c);
+        @include ai(c);
+        @include ac(c);
+        @include fw;
+
+        &__item {
+            width: 100%;
+            margin: 25px 0;
+            text-align: center;
+
+            @include d(f);
+            @include jc(c);
+            @include fw;
+
+            // responsive styles
+            @include breakpoint(sm) {
+                width: 40%;
+            }
+            @include breakpoint(md) {
+                width: 33.33%;
+                margin-bottom: 0px;
+            }
+
+            img {
+                margin-bottom: 20px;
+            }
+
+            .para {
+                width: 100%;
+                @include d(f);
+                @include jc(c);
+                @include ai(c);
+
+                .num {
+                    font-family: $font-heading;
+                    font-size: 50px;
+                    font-weight: 700;
+                    color: rgba(26, 39, 49, 0.3);
+                    line-height: 1;
+                    margin-right: 10px;
+
+                    @include breakpoint(md) {
+                        font-size: 60px;
+                    }
+                }
+
+                // responsive styles
+                @include breakpoint(sm) {
+                    text-align: left;
+                }
+            } //para
+        } // icons__items
+    } // icons
+
+    .cta {
+        margin-top: 30px;
+    }
+}
+
+// ----------------------------- we-play-nice
+#we-play-nice {
+    padding: 65px 0;
+    position: relative;
+    @include bg-grad;
+
+    .title--sec {
+        margin-bottom: 20px;
+    }
+
+    .icons {
+        text-align: center;
+        padding: 0 10px;
+        width: 100%;
+        margin-top: 45px;
+        margin-bottom: 45px;
+
+        @include d(f);
+        @include jc(sb);
+        @include ai(c);
+        @include ac(c);
+        @include fw;
+
+        @include breakpoint(sm) {
+            @include jc(c);
+            padding: 0;
+            // background: pink;
+        }
+        @include breakpoint(md) {
+            @include jc(sb);
+        }
+
+        &__item {
+            width: 47%;
+            margin-bottom: 20px;
+            padding: 23px;
+            min-height: 100px;
+            box-shadow: 0px 0px 30px 0px rgba(1, 2, 2, 0.2);
+
+            @include bgw;
+            @include br;
+            @include d(f);
+            @include jc(c);
+            @include ai(c);
+
+            // responsive styles
+            @include breakpoint(sm) {
+                width: 28%;
+                margin: 15px;
+            }
+
+            @include breakpoint(md) {
+                margin: 0px;
+                width: 17%;
+                min-height: 135px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+                margin-left: auto;
+                margin-right: auto;
+
+                @include breakpoint(sm) {
+                    margin: 15px;
+                }
+            }
+
+            img {
+                width: 86px;
+
+                @include breakpoint(md) {
+                    max-width: 150px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// ----------------------------- the voxtell advantage
+#the-advantage {
+    padding: 65px 0;
+    background-image: url(../images/voxtell-advantage-bg-tablet.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-bottom: 300px;
+    text-align: center;
+
+    @include breakpoint(md) {
+        background-image: url(../images/thevox-tell-advantage.jpg);
+        background-size: cover;
+        background-position: center left;
+        padding-bottom: 65px;
+        text-align: left;
+    }
+
+    .container {
+        @include breakpoint(md) {
+            max-width: 1170px;
+
+            @include d(f);
+            @include jc(fs);
+        }
+    }
+
+    .col-left {
+        .para {
+            margin-top: 20px;
+        }
+
+        @include breakpoint(md) {
+            width: 600px;
+        }
+    }
+
+    .col-right {
+        margin-top: 45px;
+
+        @include breakpoint(md) {
+            margin-left: 25px;
+        }
+    }
+}
+
+// ----------------------------- lead capture
+
+#lead-capture {
+    padding: 55px 0;
+    text-align: center;
+
+    @include breakpoint-fluid(1170px) {
+        padding: 93px 0 193px 0;
+        text-align: left;
+
+        background-color: #ffffff;
+        background-image: url(../images/resource-bg.jpg);
+        background-position: -161px 0px;
+        background-repeat: no-repeat;
+        background-size: 667px auto;
+    }
+
+    .row {
+        @include jc(sb);
+        @include ai(c);
+
+        @include breakpoint-fluid(1170px) {
+            @include fw(nowrap);
+        }
+    }
+
+    .col-left {
+        text-align: center;
+        margin-bottom: 25px;
+        width: 100%;
+
+        @include breakpoint-fluid(1170px) {
+            max-width: 257px;
+        }
+
+        img {
+            margin: 0 auto;
+
+            @include breakpoint-fluid(1170px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .col-right {
+        @include breakpoint-fluid(1170px) {
+            width: auto;
+            margin-left: 65px;
+        }
+
+        .title--sec {
+            margin-bottom: 25px;
+        }
+    }
+
+    .lead-capture-cta {
+        margin-top: 25px;
+    }
+}
+
+// ---------------------------------------- testimonials
+
+#happy-clients {
+    text-align: center;
+
+    @include breakpoint(sm) {
+        margin-top: -75px;
+    }
+
+    .row.clients {
+        @include bg-grad;
+        @include br;
+        padding: 42px;
+        box-shadow: 0px 0px 88px 4px rgba(34, 31, 31, 0.15);
+    }
+
+    .icons {
+        margin-top: 35px;
+
+        @include d(f);
+        @include jc(sb);
+        @include ai(c);
+        @include fw;
+
+        @include breakpoint(md) {
+            @include fw(nowrap);
+        }
+
+        &__item {
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            @include breakpoint(sm) {
+                width: 32%;
+            }
+
+            @include breakpoint(md) {
+                width: auto;
+                margin-bottom: 0 !important;
+            }
+
+            img {
+                padding: 0 15px;
+            }
+        }
+    } // icons
+}
+
+#testimonials {
+    background-color: #eeeeee;
+    background-image: url(https://voxtell.wpengine.com/wp-content/uploads/2019/07/testimonial-bg-full.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -100px;
+    padding: 160px 0px 85px 0px;
+
+    @include breakpoint(md) {
+        margin-top: -158px;
+        padding: 200px 0px 120px 0px;
+    }
+}

@@ -37,7 +37,7 @@
 // Flex Line Wrapping
 // - applies to: flex containers
 // nowrap | wrap | wrap-reverse
-@mixin fw($wrap) {
+@mixin fw($wrap: wrap) {
     flex-wrap: $wrap;
 }
 

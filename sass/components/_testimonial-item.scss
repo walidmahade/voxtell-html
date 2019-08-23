@@ -1,0 +1,54 @@
+.testimonial__item {
+    max-width: 600px;
+    margin-left: auto;
+    margin-top: 20px;
+
+    &__body {
+        @include bgw;
+        border-radius: 5px;
+        padding: 32px;
+        position: relative;
+        font-size: 26px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 88px rgba(34, 31, 31, 0.15);
+
+        @include breakpoint(xs) {
+            font-size: 17px;
+        }
+
+        &:after {
+            content: "";
+            background-image: url(../images/angle_-testimonial-bg.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 36px;
+            width: 31px;
+            position: absolute;
+            right: 35px;
+            bottom: -32px;
+        }
+    } // body
+
+    &__foot {
+        text-align: right;
+        @include d(f);
+        @include jc(fe);
+        @include ai(c);
+        margin-top: 45px;
+
+        .info {
+            margin-right: 25px;
+        }
+
+        .name {
+            font-weight: 700;
+            font-size: 22px;
+            font-family: $font-heading;
+        }
+
+        .para {
+            font-weight: 300;
+        }
+    }
+} // item itself

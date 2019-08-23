@@ -1,0 +1,32 @@
+.ib {
+    @include d(f);
+    @include jc(c);
+
+    &__item {
+        text-align: center;
+        width: 100%;
+        padding: 0 25px;
+        margin-bottom: 45px;
+
+        // responsive styles
+        @include breakpoint(sm) {
+            width: 45%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @include breakpoint(md) {
+            width: 33.33%;
+            margin-bottom: 0;
+        }
+
+        .title--alt {
+            padding: 15px 0;
+        }
+
+        .para {
+            font-size: 18px;
+        }
+    }
+}

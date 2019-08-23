@@ -1,23 +1,38 @@
 // utility
+.light {
+    color: #fff;
+}
 
 .left {
-  text-align: left;
+    text-align: left;
 }
 
 .right {
-  text-align: right;
+    text-align: right;
 }
 
 .center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+    text-align: center;
 }
 
 .justify {
-  text-align: justify;
+    text-align: justify;
 }
 
 .hidden-sm {
-  display: none;
+    display: none;
+}
+
+// margins
+.mlra {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mla {
+    margin-left: auto;
+}
+
+.mra {
+    margin-right: auto;
 }

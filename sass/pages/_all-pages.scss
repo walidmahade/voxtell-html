@@ -1,0 +1,76 @@
+body {
+    @include breakpoint(md) {
+        background-image: url("../images/inner-page-top-circles.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+    }
+}
+
+// ----------------------------------- background overlays
+.bg-overlay {
+    display: none;
+
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    @include breakpoint(md) {
+        display: block;
+    }
+
+    &.dots-left {
+        background-image: url(../images/section-bg-gradient-overlay-dots.png);
+        background-position: -276px -729px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        opacity: 1;
+    }
+
+    &.dots-right {
+        background-image: url(../images/section-bg-gradient-overlay-dots.png);
+        background-position: 130% -729px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        opacity: 1;
+    }
+}
+
+// ----------------------------------------- lead capture cta
+.lead-capture-cta {
+    width: 100%;
+
+    input {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 5px 5px 5px 5px;
+        padding: 12px;
+        width: 100%;
+
+        @include breakpoint(sm) {
+            padding: 16px;
+            font-size: 16px;
+            min-height: 47px;
+            margin-right: 8px;
+            width: auto;
+            min-width: 50%;
+        }
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        @include breakpoint(sm) {
+            margin-top: 0;
+            width: auto;
+            min-height: 47px;
+            padding-top: 17px;
+            padding-bottom: 17px;
+            font-size: 16px;
+        }
+    }
+}

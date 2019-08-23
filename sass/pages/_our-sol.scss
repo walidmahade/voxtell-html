@@ -1,0 +1,174 @@
+#our-sol-header {
+    background-color: #eeeeee;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+
+    @include d(f);
+    @include fw;
+
+    // responsive styles
+    @include breakpoint(md) {
+        @include fw(nowrap);
+    }
+
+    .left-col {
+        width: 100%;
+        min-height: 400px;
+        min-width: 100%;
+        background-image: url(../images/our-solution-hero-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+
+        // responsive styles
+        @include breakpoint(md) {
+            background-position: center right;
+            min-width: 580px;
+            min-height: 420px;
+            width: auto;
+            padding: 70px 0 160px 0;
+        }
+    }
+
+    .right-col {
+        padding: 40px 10px 160px 10px;
+        text-align: center;
+
+        // responsive styles
+        @include breakpoint(md) {
+            text-align: left;
+            padding-top: 70px;
+            max-width: 590px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: calc((100% - 1000px) / 2);
+            padding-bottom: 0;
+        }
+    }
+
+    .title {
+        @include d(f);
+        @include ai(fe);
+        @include jc(c);
+
+        // responsive styles
+        @include breakpoint(md) {
+            @include jc(fs);
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+    }
+
+    .para {
+        margin-top: 15px;
+    }
+} // our sol header
+
+#our-sol-reviews {
+    min-height: 215px;
+    padding-bottom: 65px;
+
+    // responsive styles
+    @include breakpoint(md) {
+        min-height: 315px;
+        background-image: url(../images/how-it-works-bg.png);
+        background-position: -226px -221px;
+        background-repeat: no-repeat;
+    }
+
+    .testimonial {
+        &__item {
+            margin-right: auto;
+            margin-top: -90px;
+        }
+    }
+} // our sol reviews
+
+#our-sol-icon-box {
+    padding: 20px 0 60px 0;
+} // our sol icon box
+
+#our-sol-cta {
+    padding: 40px 0;
+    @include bg-grad;
+
+    .row {
+        @include jc(c);
+        @include ai(c);
+        @include fw;
+        // responsive styles
+        @include breakpoint(md) {
+            @include jc(sb);
+            @include fw(nowrap);
+        }
+    }
+
+    .title--sec {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+
+        // responsive styles
+        @include breakpoint(md) {
+            width: auto;
+            text-align: left;
+            font-size: 38px;
+            margin: 0;
+        }
+    }
+} // our sol cta
+
+#our-sol-diff {
+    padding: 44px 0px 300px 0px;
+    background-image: url(../images/how-it-works-bg.png);
+    background-repeat: no-repeat;
+    background-position: 50% 102%;
+    background-size: auto 300px;
+
+    // responsive styles
+    @include breakpoint(md) {
+        padding: 45px 0px 150px 0px;
+        background-image: url(../images/how-it-works-bg.png);
+        background-position: 64vw 437px;
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        max-width: 695px;
+    }
+
+    .osd__item {
+        @include d(f);
+        @include ai(fs);
+        @include fw;
+        margin: 45px 0 0 0;
+        text-align: center;
+
+        // responsive styles
+        @include breakpoint(md) {
+            text-align: left;
+            @include fw(nowrap);
+        }
+
+        .icon {
+            min-width: 66px;
+            width: 100%;
+            margin-bottom: 15px;
+
+            // responsive styles
+            @include breakpoint(md) {
+                width: auto;
+                margin-right: 22px;
+                margin-bottom: 0;
+            }
+        }
+
+        .title--alt {
+            margin-bottom: 5px;
+        }
+    }
+} // our-sol-diff end

@@ -1,0 +1,250 @@
+#site-footer {
+    padding: 0 0 15px 0;
+    background-color: #1a2731;
+    background-image: url(../images/footer-bg-overlay-dektop.png);
+    background-size: auto;
+    background-position: center;
+
+    // responsive styles
+    @include breakpoint(xs) {
+        background-image: url(../images/footer-bg-overlay-mobile.png);
+        background-position: 50% 720px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        padding-bottom: 100px;
+    }
+
+    .footer-cta {
+        padding: 40px 40px;
+        margin-top: -65px;
+
+        @include bgw;
+        @include bs;
+        @include br;
+        @include d(f);
+        @include jc(c);
+        @include ai(c);
+        @include ac(c);
+        @include fw;
+
+        // responsive styles
+        @include breakpoint(md) {
+            @include jc(sb);
+            @include fw(nowrap);
+        }
+
+        .title--sec {
+            font-size: 28px;
+            text-align: center;
+
+            // responsive styles
+            @include breakpoint(md) {
+                font-size: 33px;
+                text-align: left;
+            }
+        }
+
+        .btn {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            margin-top: 25px;
+
+            // responsive styles
+            @include breakpoint(sm) {
+                width: auto;
+            }
+            // responsive styles
+            @include breakpoint(md) {
+                margin-top: 0;
+                margin-right: 0;
+            }
+        }
+    } // row cta
+
+    .row.content {
+        margin-top: 65px;
+        margin-bottom: 20px;
+        @include jc(sb);
+
+        // responsive styles
+        @include breakpoint(xs) {
+            @include jc(c);
+            flex-direction: column;
+        }
+
+        .brand {
+            // responsive styles
+            @include breakpoint(xs) {
+                text-align: center;
+                margin-bottom: 25px;
+            }
+        }
+
+        .numbers {
+            @include d(f);
+            @include jc(fe);
+            @include ai(c);
+            @include fw;
+            text-align: right;
+
+            // responsive styles
+            @include breakpoint(xs) {
+                flex-direction: column;
+                @include jc(c);
+            }
+
+            span,
+            a {
+                color: #fff;
+            }
+
+            .icon {
+                margin-right: 10px;
+            }
+        }
+
+        .header-numbers {
+            margin-left: 20px;
+            @include d(b);
+            @include fw;
+
+            // responsive styles
+            @include breakpoint(xs) {
+                margin-left: 0;
+                margin-top: 25px;
+            }
+        }
+
+        .number__item {
+            // width: 100%;
+            @include jc(fe);
+        }
+    } // row content
+
+    .row.newsletter {
+        max-width: 650px;
+        margin: 0 auto;
+
+        @include jc(sb);
+
+        .left-col {
+            // @include bgw;
+            // responsive styles
+            @include breakpoint(xs) {
+                @include fw;
+
+                text-align: center;
+                width: 100%;
+            }
+
+            .para {
+                margin-bottom: 15px;
+            }
+
+            .lead-capture-cta {
+                @include ai(c);
+
+                input {
+                    width: 66.66%;
+                }
+
+                // responsive styles
+                @include breakpoint(xs) {
+                    .btn {
+                        width: 30%;
+                        margin-top: 0;
+                        font-size: 17px;
+                    }
+                }
+            } // lead capture
+        } // left col
+
+        .right-col {
+            text-align: right;
+
+            // responsive styles
+            @include breakpoint(xs) {
+                @include fw;
+
+                text-align: center;
+                width: 100%;
+            }
+
+            .para {
+                margin-bottom: 15px;
+
+                // responsive styles
+                @include breakpoint(xs) {
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .social {
+            @include d(f);
+            @include jc(fe);
+            @include ai(c);
+
+            // responsive styles
+            @include breakpoint(xs) {
+                @include jc(c);
+            }
+
+            &__icon {
+                background-color: rgba(255, 255, 255, 0.5);
+                font-size: 20px;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                margin-left: 15px;
+                border-radius: 50%;
+                @include d(f);
+                @include jc(c);
+                @include ai(c);
+            }
+
+            svg {
+                height: 20px;
+                width: 25px;
+            }
+        }
+    } // row newsletter
+
+    .copyright {
+        margin-top: 35px;
+
+        .para {
+            font-size: 15px;
+            font-family: $font-heading;
+        }
+
+        br {
+            display: block;
+
+            // responsive styles
+            @include breakpoint(sm) {
+                display: none;
+            }
+        }
+
+        .seprator {
+            display: none;
+
+            // responsive styles
+            @include breakpoint(sm) {
+                display: inline-block;
+            }
+        }
+    } // row copyright
+
+    .end-logo {
+        margin-top: 25px;
+        @include jc(c);
+
+        // responsive styles
+        @include breakpoint(xs) {
+            display: none;
+        }
+    } // row end logo
+}
