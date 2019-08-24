@@ -3,215 +3,37 @@
 // Provided by: Cristina
 // Source: Some Chinese website 1243680629953_zcool.com.cn
 // ********************************************
+@font-face {
+    font-family: 'Omnes';
+    src: url('../fonts/Omnes_ATTW02.eot');
+    src: url('../fonts/Omnes_ATTW02.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Omnes_ATTW02.woff') format('woff'),
+         url('../fonts/Omnes_ATTW02.ttf') format('truetype'),
+         url('../fonts/Omnes_ATTW02.svg#oswaldbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
-// regular
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-regular.otf") format("opentype");
-//     font-style: normal;
-//     font-weight: normal;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-bold.otf") format("opentype");
-//     font-style: normal;
-//     font-weight: bold;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-hairline.otf") format("opentype");
-//     font-style: normal;
-//     font-weight: 100;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-thin.otf") format("opentype");
-//     font-style: normal;
-//     font-weight: 200;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-extralight.otf") format("opentype");
-//     font-style: normal;
-//     font-weight: 300;
-// }
 @font-face {
-    font-family: omnes;
-    src: font_url("../fonts/omnes-light.otf") format("opentype");
-    font-style: normal;
-    font-weight: 300;
-}
-@font-face {
-    font-family: omnes;
-    src: font_url("../fonts/omnes-regular.otf") format("opentype");
-    font-style: normal;
-    font-weight: 400;
-}
-@font-face {
-    font-family: omnes;
-    src: font_url("../fonts/omnes-medium.otf") format("opentype");
-    font-style: normal;
-    font-weight: 500;
-}
-@font-face {
-    font-family: omnes;
-    src: font_url("../fonts/omnes-semibold.otf") format("opentype");
-    font-style: normal;
+    font-family: 'Omnes';
+    src: url('fonts/Omnes_ATTW02-Medium.eot');
+    src: url('fonts/Omnes_ATTW02-Medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Omnes_ATTW02-Medium.woff') format('woff'),
+         url('fonts/Omnes_ATTW02-Medium.ttf') format('truetype'),
+         url('fonts/Omnes_ATTW02-Medium.svg#oswaldbook') format('svg');
     font-weight: 600;
+    font-style: normal;
 }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-bold.otf") format("opentype");
-//     font-style: normal;
-//     font-weight: 700;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-black.otf") format("opentype");
-//     font-style: normal;
-//     font-weight: 900;
-// }
-
-// italic
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-regular-italic.otf") format("opentype");
-//     font-style: italic;
-//     font-weight: normal;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-bold-italic.otf") format("opentype");
-//     font-style: italic;
-//     font-weight: bold;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-hairline-italic.otf") format("opentype");
-//     font-style: italic;
-//     font-weight: 100;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-thin-italic.otf") format("opentype");
-//     font-style: italic;
-//     font-weight: 200;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-extralight-italic.otf") format("opentype");
-//     font-style: italic;
-//     font-weight: 300;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-light-italic.otf") format("opentype");
-//     font-style: italic;
-//     font-weight: 400;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-regular-italic.otf") format("opentype");
-//     font-style: italic;
-//     font-weight: 500;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-medium-italic.otf") format("opentype");
-//     font-style: italic;
-//     font-weight: 600;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-semibold-italic.otf") format("opentype");
-//     font-style: italic;
-//     font-weight: 700;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-bold-italic.otf") format("opentype");
-//     font-style: italic;
-//     font-weight: 800;
-// }
-// @font-face {
-//     font-family: omnes;
-//     src: font_url("../fonts/omnes-black-italic.otf") format("opentype");
-//     font-style: italic;
-//     font-weight: 900;
-// }
-
-/** =================== MONTSERRAT ALTERNATES =================== **/
-
-/** Montserrat Alternates Thin **/
-// @font-face {
-//     font-family: "Montserrat Alternates";
-//     font-weight: 100;
-//     font-style: normal;
-//     src: url("../fonts/MontserratAlternates-Thin.eot");
-//     src: url("../fonts/MontserratAlternates-Thin.eot?#iefix") format("embedded-opentype"),
-//         url("../fonts/MontserratAlternates-Thin.woff2") format("woff2"),
-//         url("../fonts/MontserratAlternates-Thin.woff") format("woff");
-// }
-
-/** Montserrat Alternates Thin-Italic **/
-// @font-face {
-//     font-family: "Montserrat Alternates";
-//     font-weight: 100;
-//     font-style: italic;
-//     src: url("../fonts/MontserratAlternates-ThinItalic.eot");
-//     src: url("../fonts/MontserratAlternates-ThinItalic.eot?#iefix")
-//             format("embedded-opentype"),
-//         url("../fonts/MontserratAlternates-ThinItalic.woff2") format("woff2"),
-//         url("../fonts/MontserratAlternates-ThinItalic.woff") format("woff");
-// }
-
-/** Montserrat Alternates ExtraLight **/
-// @font-face {
-//     font-family: "Montserrat Alternates";
-//     font-weight: 200;
-//     font-style: normal;
-//     src: url("../fonts/MontserratAlternates-ExtraLight.eot");
-//     src: url("../fonts/MontserratAlternates-ExtraLight.eot?#iefix")
-//             format("embedded-opentype"),
-//         url("../fonts/MontserratAlternates-ExtraLight.woff2") format("woff2"),
-//         url("../fonts/MontserratAlternates-ExtraLight.woff") format("woff");
-// }
-
-/** Montserrat Alternates ExtraLight-Italic **/
-// @font-face {
-//     font-family: "Montserrat Alternates";
-//     font-weight: 200;
-//     font-style: italic;
-//     src: url("../fonts/MontserratAlternates-ExtraLightItalic.eot");
-//     src: url("../fonts/MontserratAlternates-ExtraLightItalic.eot?#iefix")
-//             format("embedded-opentype"),
-//         url("../fonts/MontserratAlternates-ExtraLightItalic.woff2") format("woff2"),
-//         url("../fonts/MontserratAlternates-ExtraLightItalic.woff") format("woff");
-// }
-
-/** Montserrat Alternates Light **/
-// @font-face {
-//     font-family: "Montserrat Alternates";
-//     font-weight: 300;
-//     font-style: normal;
-//     src: url("../fonts/MontserratAlternates-Light.eot");
-//     src: url("../fonts/MontserratAlternates-Light.eot?#iefix")
-//             format("embedded-opentype"),
-//         url("../fonts/MontserratAlternates-Light.woff2") format("woff2"),
-//         url("../fonts/MontserratAlternates-Light.woff") format("woff");
-// }
-
-/** Montserrat Alternates Light-Italic **/
-// @font-face {
-//     font-family: "Montserrat Alternates";
-//     font-weight: 300;
-//     font-style: italic;
-//     src: url("../fonts/MontserratAlternates-LightItalic.eot");
-//     src: url("../fonts/MontserratAlternates-LightItalic.eot?#iefix")
-//             format("embedded-opentype"),
-//         url("../fonts/MontserratAlternates-LightItalic.woff2") format("woff2"),
-//         url("../fonts/MontserratAlternates-LightItalic.woff") format("woff");
-// }
+@font-face {
+    font-family: 'Omnes';
+    src: url('fonts/Omnes_ATTW02-Bold.eot');
+    src: url('fonts/Omnes_ATTW02-Bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Omnes_ATTW02-Bold.woff') format('woff'),
+         url('fonts/Omnes_ATTW02-Bold.ttf') format('truetype'),
+         url('fonts/Omnes_ATTW02-Bold.svg#oswaldbook') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
 
 /** Montserrat Alternates Regular **/
 @font-face {

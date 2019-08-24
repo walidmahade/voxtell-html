@@ -4,13 +4,13 @@
 
         // responsive styles
         @include breakpoint(md) {
-            @include jc(fs);
+            @include jc(fs); 
         }
-    }
+    } 
 }
 
 #contact-us {
-    background-image: url(../images/contact-page-bg.png);
+    // background-image: url(../images/contact-page-bg.png);
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: contain;
