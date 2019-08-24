@@ -16,6 +16,9 @@
 @import "components/hamburger-menu";
 @import "components/testimonial-item";
 @import "components/page-title";
+@import "components/accordion";
+@import "components/form";
+@import "components/box";
 
 /*================ Website sections ================*/
 @import "sections/top-bar";
@@ -29,8 +32,10 @@
 @import "pages/all-pages";
 @import "pages/home";
 @import "pages/our-sol";
+@import "pages/careers";
 @import "pages/contact";
 
+// coming soon page
 #brand {
     display: flex;
     justify-content: center;

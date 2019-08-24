@@ -1,0 +1,56 @@
+.form-wrap {
+    @include d(f);
+    @include jc(sb);
+    @include fw;
+
+    .field {
+        width: 100%;
+        margin-bottom: 15px;
+
+        &--half {
+            width: 49%;
+
+            // responsive styles
+            @include breakpoint(xs) {
+                width: 100%;
+            }
+        }
+    }
+
+    .styled {
+        background-color: #fff;
+        border: 1px solid #a7a9ac;
+        border-radius: 5px 5px 5px 5px;
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        padding: 6px 16px;
+        min-height: 50px;
+    }
+
+    select {
+        color: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    textarea.styled {
+        padding: 15px;
+    }
+
+    #form-field-upload_resume_visible {
+        @include d(f);
+        @include jc(sb);
+        @include ai(c);
+        color: rgba(0, 0, 0, 0.5) !important;
+        cursor: pointer;
+
+        svg {
+            height: auto;
+            width: 25px;
+            opacity: 0.55;
+        }
+    }
+
+    button[type="submit"] {
+        margin-top: 15px;
+    }
+}

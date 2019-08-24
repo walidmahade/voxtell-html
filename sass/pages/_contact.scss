@@ -1,0 +1,154 @@
+.contact #page-title {
+    .row {
+        @include jc(c);
+
+        // responsive styles
+        @include breakpoint(md) {
+            @include jc(fs);
+        }
+    }
+}
+
+#contact-us {
+    background-image: url(../images/contact-page-bg.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0px 0px 215px 0px;
+
+    //responsive styles
+    @include breakpoint(md) {
+        background-size: auto;
+        padding: 0px 0px 161px 0px;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+
+        // responsive styles
+        @include breakpoint(md) {
+            width: 50%;
+        }
+    } // left, right col
+
+    .left-col {
+        margin-bottom: 45px;
+        padding-right: 0px;
+
+        // responsive styles
+        @include breakpoint(md) {
+            margin-bottom: 0;
+            padding-right: 25px;
+        }
+
+        .title--sec {
+            margin-top: 25px;
+            font-weight: 900;
+            font-size: 20px;
+            text-align: center;
+
+            // responsive styles
+            @include breakpoint(md) {
+                font-size: 25px;
+                text-align: left;
+            }
+        }
+
+        .para--subt {
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.2em;
+            margin-top: 15px;
+            text-align: center;
+
+            // responsive styles
+            @include breakpoint(md) {
+                font-size: 22px;
+                text-align: left;
+            }
+        } // para subt
+
+        .box {
+            margin-top: 30px;
+            padding: 40px;
+
+            .item {
+                @include d(f);
+                @include ai(c);
+                @include ac(c);
+                margin-bottom: 8px;
+
+                // responsive styles
+                @include breakpoint(md) {
+                    margin-bottom: 15px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                svg {
+                    width: 15px;
+                    height: 15px;
+
+                    // responsive styles
+                    @include breakpoint(md) {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+
+            .info {
+                color: #000000;
+                padding-left: 15px;
+                // margin-bottom: 20px;
+                font-size: 15px;
+                font-family: $font-heading;
+
+                // responsive styles
+                @include breakpoint(md) {
+                    font-size: 24px;
+                    text-align: left;
+                }
+            }
+
+            &.email {
+                .icon {
+                    margin-bottom: -5px;
+                }
+            }
+
+            &.address {
+                .item {
+                    // responsive styles
+                    @include breakpoint(md) {
+                        @include ac(fs);
+                        @include ai(fs);
+                    }
+                }
+                .icon {
+                    // responsive styles
+                    @include breakpoint(md) {
+                        margin-top: 10px;
+                    }
+                }
+
+                .info {
+                    line-height: 36px;
+                }
+            }
+        }
+    } // left col
+
+    .right-col {
+        padding-left: 0px;
+
+        // responsive styles
+        @include breakpoint(md) {
+            padding-left: 25px;
+        }
+    } // right col
+} // contact us

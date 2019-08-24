@@ -1,0 +1,43 @@
+#careers-hero {
+    @include bg-grad;
+    position: relative;
+    text-align: center;
+    padding: 60px 0px 146px 0px;
+
+    .title--sec,
+    .para {
+        color: #fff;
+    }
+
+    .para {
+        max-width: 610px;
+        margin: 0 auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding: 0 15px;
+    }
+} // section careers hero
+
+#careers-faq {
+    margin: -110px 0;
+} // section careers faq
+
+#careers-apply {
+    padding: 65px 15px 150px 15px;
+
+    .container {
+        max-width: 530px;
+    }
+
+    .row {
+        @include jc(c);
+        text-align: center;
+    }
+
+    .title--sec {
+        margin-bottom: 25px;
+    }
+    .para {
+        margin-bottom: 45px;
+    }
+} // section careers-apply

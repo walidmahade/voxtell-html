@@ -55,4 +55,41 @@
             $menuTriggerMobile.removeClass("is-active");
         }
     });
+
+    // ------------------------------------------------ widget accordion
+    const $accdnItem = $(".accdn__item");
+
+    $accdnItem.click(function() {
+        $(this)
+            .siblings()
+            .removeClass("accdn__item--active");
+        $(this).toggleClass("accdn__item--active");
+    });
+
+    /*========================================================
+        careers page form script
+    =========================================================*/
+    const uploadButton = $("#form-field-upload_resume_visible"),
+        realInput = $("#form-field-resume_up_field");
+
+    // helper function
+    function truncate(n, len) {
+        var ext = n.substring(n.lastIndexOf(".") + 1, n.length).toLowerCase();
+        var filename = n.replace("." + ext, "");
+        if (filename.length <= len) {
+            return n;
+        }
+        filename = filename.substr(0, len) + (n.length > len ? "[..]" : "");
+        return filename + "." + ext;
+    }
+
+    uploadButton.on("click", function(e) {
+        e.preventDefault();
+        realInput.click();
+    });
+
+    realInput.on("change", function(e) {
+        let fileName = e.target.files[0].name;
+        uploadButton.children("#btn-val").html(truncate(fileName, 13));
+    });
 })(jQuery);

@@ -1,0 +1,78 @@
+.accdn {
+    @include bgw;
+    @include br;
+    @include bs;
+
+    &__title {
+        padding: 34px 50px 34px 50px;
+        font-weight: 600;
+        font-family: $font-heading;
+        position: relative;
+        cursor: pointer;
+
+        .icon {
+            position: absolute;
+            right: 25px;
+
+            &--open {
+                opacity: 0;
+            }
+
+            &--closed {
+                opacity: 1;
+            }
+
+            svg {
+                width: 30px;
+            }
+        }
+    }
+
+    &__body {
+        overflow: hidden;
+        // visibility: hidden;
+        max-height: 0px;
+        transition: max-height 0.5s;
+        will-change: max-height;
+        @include bgw;
+    }
+
+    &__body__wrap {
+        padding: 0 50px 50px 50px;
+    }
+
+    .btn {
+        margin-top: 35px;
+    }
+
+    &__item {
+        text-align: center;
+        border-bottom: 1px solid rgba($dark, 0.1);
+
+        &--active {
+            .accdn__title {
+                color: $orange;
+
+                .icon {
+                    &--open {
+                        opacity: 1;
+                    }
+
+                    &--closed {
+                        opacity: 0;
+                    }
+
+                    svg {
+                        width: 30px;
+                    }
+                }
+            }
+
+            .accdn__body {
+                // visibility: visible;
+                max-height: 1000px;
+                transition: max-height 0.5s;
+            }
+        }
+    }
+}
