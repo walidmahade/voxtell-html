@@ -18,3 +18,62 @@
         margin-bottom: 20px;
     }
 }
+
+
+#all-features {
+    margin-top: -50px;
+    padding-bottom: 150px;
+
+    .row {
+        @include bgw;
+        @include br;
+        @include bs;
+        padding: 40px 100px 40px 100px;
+    }
+
+    .right-col,
+    .left-col {
+        width: 50%;
+    }
+
+    .right-col {
+        padding-left: 50px;
+    }
+    .left-col {
+        padding-right: 50px;
+    }
+
+    // feature item
+    .feature-item {
+        @include d(f);
+        @include ai(fs);
+        @include ac(fs);
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .icon {
+            min-width: 19px;
+            width: auto;
+        }
+
+        .info {
+            margin-left: 15px;
+        }
+
+        .title {
+            font-family: $font-heading;
+            font-weight: 700;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .para {
+            font-size: 14px;
+            display: block;
+        }
+    } // item
+}
