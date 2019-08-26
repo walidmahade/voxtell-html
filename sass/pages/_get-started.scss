@@ -1,0 +1,36 @@
+.page-get-started #page-title {
+    margin-bottom: 20px;
+}
+
+.page-get-started #page-title .para {
+    margin-top: 15px;
+}
+
+.page-get-started #page-title .row,
+#get-started-form .row {
+    margin-left: 0;
+    text-align: center;
+    @include jc(c);
+
+    // responsive styles
+    @include breakpoint(md) {
+        max-width: 500px;
+        text-align: left;
+        @include jc(fs);
+    }
+}
+
+#get-started-form {
+    background-image: url(https://voxtell.wpengine.com/wp-content/uploads/2019/07/get-started-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    padding: 0px 0px 250px 0px;
+
+    // responsive styles
+    @include breakpoint(md) {
+        padding-bottom: 150px;
+        background-size: contain;
+        background-position: bottom right;
+    }
+}

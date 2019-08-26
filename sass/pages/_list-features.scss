@@ -38,9 +38,16 @@
 
     .right-col {
         padding-left: 50px;
+        @include d(f);
+        @include fw;
+        @include ai(space-between);
+
     }
     .left-col {
         padding-right: 50px;
+        @include d(f);
+        @include fw;
+        @include ai(space-between);
     }
 
     // feature item

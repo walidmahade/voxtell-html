@@ -17,6 +17,7 @@
     .footer-cta {
         padding: 40px 40px;
         margin-top: -65px;
+        z-index: 9;
 
         @include bgw;
         @include bs;

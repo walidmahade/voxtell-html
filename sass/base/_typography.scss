@@ -54,6 +54,7 @@ p {
     &--big {
         font-size: 37px;
         line-height: 1;
+        color: #000;
 
         @include breakpoint(md) {
             font-size: 60px;

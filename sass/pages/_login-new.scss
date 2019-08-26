@@ -1,0 +1,143 @@
+.login-page-new {
+    // background: none;
+}
+
+
+#login-new {
+    @include d(f);
+    @include fw;
+    min-height: 100vh;
+    position: relative;
+
+    .header {
+        text-align: center;
+
+        .para {
+            opacity: .5;
+            margin: 20px 0;
+        }
+    }
+
+    .footer {
+        margin-top: 35px;
+
+        .para {
+            color: rgba(0,0,0,0.4);
+            font-size: 16px;
+        }
+
+        a {
+            color: #cb2d2c;
+            opacity: 1;
+        }
+    }
+
+    .left-col {
+        padding: 45px 20px 45px 20px;
+        @include d(f);
+        @include jc(c);
+        @include ac(c);
+        @include fw;
+        width: 100%;
+        
+        // responsive styles
+        @include breakpoint(md) {
+            width: 56%;
+        }
+    } // left col
+
+    .login-boxes {
+        @include d(f);
+        @include jc(c);
+        @include fw;
+    }
+
+    .box {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3) !important;
+        margin: 15px 15px 15px 15px;
+        padding: 20px 20px 20px 20px;
+        width: 100%;
+
+        @include breakpoint-fluid (575px) {
+            width: 44%;
+        }
+
+        @include breakpoint-fluid (1250px) {
+            width: 27%;
+        }
+
+        .title--alt {
+            margin-top: 20px;
+        }
+
+        .divider {
+            background: #cb2d2c;
+            height: 4px;
+            width: 36px;
+            margin: 20px 0;
+        }
+
+        .para {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    } // box
+
+    .right-col {
+        padding: 85px 25px;
+        background-color: transparent;
+        background-image: linear-gradient(180deg, #fbb615 0%, #cb2d2c 100%);
+        width: 100%;
+        position: relative;
+
+        @include d(f);
+        @include jc(c);
+        @include ac(c);
+        @include fw;
+        
+        // responsive styles
+        @include breakpoint(md) {
+            width: 44%;
+            padding: 45px;
+        }
+
+        .bg-overlay.dots-left {
+            background-position: 50% -100%;
+            opacity: .2;
+        }
+
+        .title--big {
+            color: #fff;
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+        }
+
+        .title--sec  {
+            margin: 20px 0;
+        }
+
+        .para {
+            font-size: 20px;
+
+            &.small {
+                font-size: 16px;
+            }
+        }
+    } // right
+
+    .lead-capture-cta {
+        margin: 20px 0;
+
+        input {
+            border-color: #fff;
+            margin-top: 10px;
+        }
+
+        .btn {
+            padding: 14px 35px;
+            margin-top: 10px;
+        }
+    }
+
+}
