@@ -1,0 +1,132 @@
+// partner program page css
+#pp-why-us {
+    position: relative;
+    overflow: hidden;
+
+    @include d(f);
+    // @include jc(f);
+    @include ai(c);
+    @include ac(c);
+    @include fw;
+    background: #eee;
+
+    // responsive styles
+    @include breakpoint(md) {
+        @include fw(nowrap);
+        @include jc(sb);
+    }
+
+    ul {
+        list-style: initial;
+        margin-top: 25px;
+    }
+
+    .left-col {
+        padding: 80px 25px 80px 35px;
+        width: 100%;
+
+        // responsive styles
+        @include breakpoint(md) {
+            width: 50%;
+        }
+        // responsive styles
+        @include breakpoint(md) {
+            width: 700px;
+            margin-left: calc((100% - 1000px) / 2);
+        }
+    }
+
+    .right-col {
+        width: 100%;
+        // text-align: center;
+
+        // responsive styles
+        @include breakpoint(md) {
+            width: 50%;
+        }
+
+        // responsive styles
+        @include breakpoint(lg) {
+            width: auto;
+            align-self: flex-end;
+            // text-align: right;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+
+            // responsive styles
+            @include breakpoint(md) {
+                width: auto;
+            }
+        }
+    }
+} // pp-why-us
+
+#pp-benefits {
+    padding: 85px 0;
+    text-align: center;
+
+    .benefits {
+        @include d(f);
+        @include fw;
+        max-width: 930px;
+        margin-top: 65px;
+    }
+
+    .benefits__item {
+        width: 100%;
+        padding: 40px 40px;
+        color: $dark;
+
+        @include breakpoint(sm) {
+            width: 50%;
+        }
+
+        &:first-child {
+            @include breakpoint(sm) {
+                border-right: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+            }
+        }
+
+        &:last-child {
+            @include breakpoint(sm) {
+                border-left: 1px solid #eee;
+                border-top: 1px solid #eee;
+                margin: -1px 0 0 -1px;
+            }
+        }
+    }
+
+    .benefits__icon {
+        margin-bottom: 15px;
+    }
+
+    .benefits__title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+} // pp benefits
+
+#pp-apply-form {
+    @include bg-grad;
+    padding: 85px 0 150px 0;
+    position: relative;
+
+    .title--sec {
+        margin-bottom: 15px;
+    }
+
+    .form-wrap {
+        max-width: 481px;
+        margin: 45px auto 0 auto;
+    }
+
+    input {
+        border: 0;
+        box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+    }
+} // pp-apply-form

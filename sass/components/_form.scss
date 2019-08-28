@@ -1,3 +1,35 @@
+/*------------------------- form elements -----------------*/
+label {
+    line-height: 1;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid $orange;
+}
+
+input[type="checkbox"]:checked {
+    background: #cb2d2d;
+    border: 3px solid #cb2d2d;
+}
+
+select {
+    background-color: #fff;
+    border: 1px solid #a7a9ac;
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 6px 16px;
+    min-height: 50px;
+    min-width: 150px;
+}
+
+/*------------------------- forms style -----------------*/
 .form-wrap {
     @include d(f);
     @include jc(sb);
@@ -54,3 +86,5 @@
         margin-top: 15px;
     }
 }
+
+// box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);

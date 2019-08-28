@@ -1,0 +1,207 @@
+#pc-header {
+    @include bg-grad;
+    position: relative;
+    text-align: center;
+
+    @include breakpoint(md) {
+        text-align: left;
+    }
+
+    .bg-overlay {
+        opacity: 0.3;
+    }
+
+    .row {
+        @include jc(sb);
+        @include ac(c);
+        @include ai(c);
+        position: relative;
+    }
+
+    .title {
+        width: 100%;
+        padding: 65px 0 20px 0;
+
+        @include breakpoint(md) {
+            padding: 110px 0;
+            width: 55%;
+        }
+
+        @include breakpoint-fluid(1350px) {
+            padding: 110px 0;
+            width: 70%;
+        }
+
+        &--sec {
+            line-height: 1.2;
+        }
+
+        .para {
+            margin-top: 15px;
+        }
+    }
+
+    .phone {
+        align-self: flex-end;
+        position: relative;
+        right: 0px;
+        bottom: -30px;
+        width: 100%;
+
+        @include breakpoint(md) {
+            width: 45%;
+        }
+
+        @include breakpoint-fluid(1350px) {
+            width: 30%;
+        }
+
+        img {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            display: block;
+
+            @include breakpoint-fluid(1350px) {
+                width: 450px;
+            }
+        } // img
+    } // phone
+}
+
+#pc-nav {
+    padding: 85px 0 65px;
+
+    .container {
+        max-width: 1140px;
+    }
+
+    .row {
+        @include ac(c);
+        @include ai(c);
+        @include jc(c);
+
+        // responsive styles
+        @include breakpoint(md) {
+            @include jc(sb);
+        }
+    }
+
+    .title--sec {
+        font-size: 32px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .right-col {
+        padding: 0 15px;
+        margin-top: 25px;
+        @include d(f);
+        @include jc(space-around);
+        @include fw;
+
+        // responsive styles
+        @include breakpoint(md) {
+            @include jc(fe);
+            margin-top: 0;
+            width: auto;
+            flex-grow: 1;
+        }
+    }
+
+    .pc-nav__item {
+        @include br;
+        text-align: center;
+        padding: 15px;
+        margin: 10px 0;
+        color: $dark;
+        // min-width: 25%;
+        width: 45%;
+        line-height: 1;
+        transition: box-shadow 0.3s ease-in-out;
+
+        // responsive styles
+        @include breakpoint(md) {
+            width: 20%;
+            margin: 15px;
+            padding: 23px;
+            @include d(f);
+            @include jc(sb);
+            @include ac(c);
+            @include ai(c);
+            @include fw;
+            flex-direction: column;
+        }
+
+        &.active,
+        &:hover {
+            box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.12);
+        }
+
+        .para {
+            line-height: 1;
+        }
+
+        .icon {
+            // width: 100%;
+            margin-bottom: 20px;
+            svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    } // item
+} // product category nav
+
+#pc-filters {
+    .row {
+        @include jc(c);
+        @include ac(c);
+        @include ai(c);
+
+        // responsive styles
+        @include breakpoint(md) {
+            @include jc(fs);
+        }
+    }
+
+    .title--sec {
+        font-size: 32px;
+        margin-right: 0;
+        margin-bottom: 25px;
+
+        // responsive styles
+        @include breakpoint(md) {
+            margin-right: 35px;
+            margin-bottom: 0;
+        }
+    }
+
+    .filters {
+        @include d(f);
+        @include jc(c);
+        @include ac(c);
+        @include ai(c);
+        @include fw;
+
+        // responsive styles
+        @include breakpoint(md) {
+            @include jc(fs);
+        }
+    }
+
+    .filter-item {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+
+    label {
+        margin-left: 5px;
+    }
+} // product category filters
+
+#pc-products {
+    padding: 65px 0 150px 0;
+}// pc-products

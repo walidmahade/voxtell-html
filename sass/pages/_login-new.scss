@@ -1,7 +1,6 @@
-.login-page-new {
-    // background: none;
-}
-
+// .login-page-new {
+//     // background: none;
+// }
 
 #login-new {
     @include d(f);
@@ -13,7 +12,7 @@
         text-align: center;
 
         .para {
-            opacity: .5;
+            opacity: 0.5;
             margin: 20px 0;
         }
     }
@@ -22,7 +21,7 @@
         margin-top: 35px;
 
         .para {
-            color: rgba(0,0,0,0.4);
+            color: rgba(0, 0, 0, 0.4);
             font-size: 16px;
         }
 
@@ -39,7 +38,7 @@
         @include ac(c);
         @include fw;
         width: 100%;
-        
+
         // responsive styles
         @include breakpoint(md) {
             width: 56%;
@@ -53,16 +52,16 @@
     }
 
     .box {
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3) !important;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3) !important;
         margin: 15px 15px 15px 15px;
         padding: 20px 20px 20px 20px;
         width: 100%;
 
-        @include breakpoint-fluid (575px) {
+        @include breakpoint-fluid(575px) {
             width: 44%;
         }
 
-        @include breakpoint-fluid (1250px) {
+        @include breakpoint-fluid(1250px) {
             width: 27%;
         }
 
@@ -94,7 +93,7 @@
         @include jc(c);
         @include ac(c);
         @include fw;
-        
+
         // responsive styles
         @include breakpoint(md) {
             width: 44%;
@@ -103,7 +102,7 @@
 
         .bg-overlay.dots-left {
             background-position: 50% -100%;
-            opacity: .2;
+            opacity: 0.2;
         }
 
         .title--big {
@@ -113,7 +112,7 @@
             letter-spacing: 10px;
         }
 
-        .title--sec  {
+        .title--sec {
             margin: 20px 0;
         }
 
@@ -139,5 +138,4 @@
             margin-top: 10px;
         }
     }
-
 }
