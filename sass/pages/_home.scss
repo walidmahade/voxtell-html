@@ -190,8 +190,8 @@
 
         @include d(f);
         @include jc(c);
-        @include ai(c);
-        @include ac(c);
+        @include ai(fs);
+        @include ac(fs);
         @include fw;
 
         &__item {
@@ -201,6 +201,8 @@
 
             @include d(f);
             @include jc(c);
+            //@include ai(fs);
+            //@include ac(fs);
             @include fw;
 
             // responsive styles
@@ -218,9 +220,14 @@
 
             .para {
                 width: 100%;
-                @include d(f);
+                @include d(if);
                 @include jc(c);
-                @include ai(c);
+                @include ai(fs);
+                justify-items: center;
+
+                //span {
+                //    justify-self: flex-end;
+                //}
 
                 .num {
                     font-family: $font-heading;

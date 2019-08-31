@@ -92,4 +92,24 @@
         let fileName = e.target.files[0].name;
         uploadButton.children("#btn-val").html(truncate(fileName, 13));
     });
+
+    /*========================================================
+        modals
+    =========================================================*/
+    $(".info-modal-trigger").click(function (e) {
+        e.preventDefault();
+        openModal();
+    });
+
+    $(".close").click(function (e) {
+        e.preventDefault();
+        closeModal();
+    });
+
+    function openModal() {
+        $(".modal").addClass("open");
+    }
+    function closeModal() {
+        $(".modal").removeClass("open");
+    }
 })(jQuery);

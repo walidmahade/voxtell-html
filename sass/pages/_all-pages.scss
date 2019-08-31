@@ -15,6 +15,7 @@ body {
     top: 0;
     left: 0;
     position: absolute;
+    z-index: 0;
 
     @include breakpoint(md) {
         display: block;
@@ -74,3 +75,51 @@ body {
         }
     }
 }
+
+/*================================================
+     product price 
+================================================*/
+.product__price {
+    &__fixed {
+        @include d(f);
+        @include jc(c);
+    }
+
+    &__monthly {
+        opacity: .6;
+        margin-top: 10px;
+
+        .num {
+            font-weight: 600;
+            opacity: .6;
+            font-family: $font-heading;
+            margin-left: 10px;
+        }
+    }
+} // product__price
+
+.old-price,
+.sale-price {
+    font-family: $font-heading;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.old-price {
+    margin-right: 15px;
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 5px;
+        background: #cc302b;
+        opacity: .8;
+        width: 66px;
+        transform: rotate(-30deg);
+        transform-origin: 0% 0%;
+        border-radius: 5px;
+        left: 15px;
+    } // :: after
+} // old price

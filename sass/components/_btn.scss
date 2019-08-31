@@ -68,4 +68,8 @@
             color: #000 !important;
         }
     } // light
+
+    &--dark {
+        background: $dark;
+    }
 }

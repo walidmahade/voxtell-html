@@ -1,0 +1,14 @@
+.hero-notext {
+    min-height: 141px;
+    background-color: #eeeeee;
+    background-image: url(../images/why-voxtell-hero.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // responsive styles
+    @include breakpoint(md) {
+        min-height: 333px;
+        background-size: auto;
+    }
+}
