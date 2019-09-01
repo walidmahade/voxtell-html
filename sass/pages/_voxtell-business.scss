@@ -1,0 +1,205 @@
+.voxtell-business {
+
+  .hero-notext {
+    background-image: url("../images/what-we-do-phone-service-hero3.jpg");
+  }
+
+  .row.cta {
+    margin-top: 45px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .products-grid {
+    position: relative;
+    padding-bottom: 0;
+
+    .header {
+      margin-bottom: 45px;
+
+      .para--subt {
+        font-weight: 400;
+        font-size: 26px;
+      }
+    }
+  }
+
+  .section--last {
+    padding-top: 25px;
+  }
+
+}
+
+#vb-under-hero {
+  .title--alt {
+    margin-bottom: 15px;
+  }
+
+  .left-col {
+    width: 100%;
+    text-align: center;
+
+    // responsive styles
+    @include breakpoint(md) {
+      text-align: left;
+      width: 60%;
+    }
+  }
+
+  .right-col {
+    width: 100%;
+
+    // responsive styles
+    @include breakpoint(md) {
+      width: 40%;
+    }
+  }
+}
+
+.vbh-box {
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+  background-color: $dark;
+  background-image: url(../images/business-phone-service-hero-box-dots.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  margin-top: 45px;
+
+  // responsive styles
+  @include breakpoint(md) {
+    max-width: 360px;
+    margin-left: auto;
+    margin-top: -150px;
+  }
+
+  .title {
+    margin-bottom: 25px;
+  }
+}
+
+// -------------------------------------------------------------
+// -------------------------------------------------------------
+#vb-price-plans {
+  @include bg-grad;
+  background-position: bottom right;
+  background-size: cover;
+  padding-bottom: 150px;
+  position: relative;
+
+  // responsive styles
+  @include breakpoint(md) {
+    background-image: url(../images/bg-phone-services.jpg);
+  }
+
+  .row {
+    justify-content: center;
+  }
+
+  .title--sec {
+    color: #fff;
+  }
+
+}
+
+.vb-price-boxes-row {
+  position: relative;
+  padding-top: 65px;
+  width: 100%;
+
+  .vb-price-box {
+    position: relative;
+    margin-top: 45px;
+  }
+
+  .badge {
+    display: block;
+    margin-bottom: -5px;
+    padding: 15px 0 20px 0;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 1;
+  }
+
+  .box {
+    position: relative;
+    min-width: 400px;
+    width: auto;
+    padding: 45px 30px;
+    margin: 0 21px;
+    z-index: 9;
+  }
+
+  .title--alt {
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .list-checkmark {
+    font-size: 20px;
+    line-height: 30px;
+
+    li:before{
+      content: '';
+      display: inline-block;
+      margin-right: 10px;
+      height: 15px;
+      width: 20px;
+      background-image: url("../images/check-mark.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  .cta {
+    margin-top: 20px;
+    @include d(f);
+    @include jc(sb);
+    @include ac(c);
+    @include ai(c);
+    @include fw;
+
+    .price {
+      position: relative;
+      width: 40%;
+
+      @include d(f);
+      @include ac(c);
+      @include ai(c);
+
+      .num {
+        font-family: $font-heading;
+        font-size: 32px;
+        font-weight: 600;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          height: 5px;
+          background: #cc302b;
+          opacity: .8;
+          width: 56px;
+          transform: rotate(-30deg);
+          transform-origin: 0% 0%;
+          border-radius: 5px;
+          left: 15px;
+        } // :: after
+      } // num
+
+      .info {
+        font-size: 12px;
+        margin-left: 15px;
+      }
+
+    } // price
+
+  } // cta
+
+}
+
+

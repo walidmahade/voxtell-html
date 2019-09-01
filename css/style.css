@@ -555,9 +555,9 @@ select { background-color: #fff; border: 1px solid #a7a9ac; -webkit-border-radiu
 
 .products-grid { text-align: center; }
 
-.products-grid .container { max-width: 1100px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+.products-grid .container { max-width: 1100px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-.products-grid .product { width: 100%; padding: 0 25px; margin-bottom: 55px; }
+.products-grid .product { width: 100%; padding: 0 30px; margin-bottom: 55px; }
 
 @media (min-width: 768px) { .products-grid .product { width: 45%; margin-bottom: 65px; padding: 0 15px; } }
 
@@ -1366,6 +1366,66 @@ select { background-color: #fff; border: 1px solid #a7a9ac; -webkit-border-radiu
 @media (min-width: 768px) { #key-features .item .right { width: 50%; text-align: left; margin-bottom: 0; } }
 
 #key-features .item .title--alt { margin-bottom: 15px; }
+
+.voxtell-business .hero-notext { background-image: url("../images/what-we-do-phone-service-hero3.jpg"); }
+
+.voxtell-business .row.cta { margin-top: 45px; text-align: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+
+.voxtell-business .products-grid { position: relative; padding-bottom: 0; }
+
+.voxtell-business .products-grid .header { margin-bottom: 45px; }
+
+.voxtell-business .products-grid .header .para--subt { font-weight: 400; font-size: 26px; }
+
+.voxtell-business .section--last { padding-top: 25px; }
+
+#vb-under-hero .title--alt { margin-bottom: 15px; }
+
+#vb-under-hero .left-col { width: 100%; text-align: center; }
+
+@media (min-width: 992px) { #vb-under-hero .left-col { text-align: left; width: 60%; } }
+
+#vb-under-hero .right-col { width: 100%; }
+
+@media (min-width: 992px) { #vb-under-hero .right-col { width: 40%; } }
+
+.vbh-box { color: #fff; padding: 40px; text-align: center; background-color: #1a2731; background-image: url(../images/business-phone-service-hero-box-dots.png); background-position: bottom left; background-repeat: no-repeat; margin-top: 45px; }
+
+@media (min-width: 992px) { .vbh-box { max-width: 360px; margin-left: auto; margin-top: -150px; } }
+
+.vbh-box .title { margin-bottom: 25px; }
+
+#vb-price-plans { background: #fbb615; background: -webkit-gradient(linear, left top, right top, from(#fbb615), to(#cb2d2c)); background: -webkit-linear-gradient(left, #fbb615 0%, #cb2d2c 100%); background: -o-linear-gradient(left, #fbb615 0%, #cb2d2c 100%); background: linear-gradient(to right, #fbb615 0%, #cb2d2c 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 ); background-position: bottom right; -webkit-background-size: cover; background-size: cover; padding-bottom: 150px; position: relative; }
+
+@media (min-width: 992px) { #vb-price-plans { background-image: url(../images/bg-phone-services.jpg); } }
+
+#vb-price-plans .row { -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+
+#vb-price-plans .title--sec { color: #fff; }
+
+.vb-price-boxes-row { position: relative; padding-top: 65px; width: 100%; }
+
+.vb-price-boxes-row .vb-price-box { position: relative; margin-top: 45px; }
+
+.vb-price-boxes-row .badge { display: block; margin-bottom: -5px; padding: 15px 0 20px 0; position: absolute; top: -50px; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); width: 80%; z-index: 1; }
+
+.vb-price-boxes-row .box { position: relative; min-width: 400px; width: auto; padding: 45px 30px; margin: 0 21px; z-index: 9; }
+
+.vb-price-boxes-row .title--alt { font-weight: 400; margin-bottom: 20px; text-align: center; }
+
+.vb-price-boxes-row .list-checkmark { font-size: 20px; line-height: 30px; }
+
+.vb-price-boxes-row .list-checkmark li:before { content: ''; display: inline-block; margin-right: 10px; height: 15px; width: 20px; background-image: url("../images/check-mark.svg"); background-repeat: no-repeat; background-position: center center; }
+
+.vb-price-boxes-row .cta { margin-top: 20px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-align-content: center; -ms-flex-line-pack: center; align-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.vb-price-boxes-row .cta .price { position: relative; width: 40%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-content: center; -ms-flex-line-pack: center; align-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+
+.vb-price-boxes-row .cta .price .num { font-family: "Montserrat Alternates", sans-serif; font-size: 32px; font-weight: 600; }
+
+.vb-price-boxes-row .cta .price .num:after { content: ""; position: absolute; bottom: 0; height: 5px; background: #cc302b; opacity: .8; width: 56px; -webkit-transform: rotate(-30deg); -ms-transform: rotate(-30deg); transform: rotate(-30deg); -webkit-transform-origin: 0% 0%; -ms-transform-origin: 0% 0%; transform-origin: 0% 0%; -webkit-border-radius: 5px; border-radius: 5px; left: 15px; }
+
+.vb-price-boxes-row .cta .price .info { font-size: 12px; margin-left: 15px; }
 
 #brand { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-align-content: center; -ms-flex-line-pack: center; align-content: center; height: 100vh; width: 100vw; }
 
