@@ -16,8 +16,8 @@
 
             let menuWidth = $(this).innerWidth();
 
-            if ($deviceWidth > 1140) {
-                if (menuWidth > 900) {
+            if (menuWidth > 900) {
+                if ($deviceWidth > 1140) {
                     console.log($logo.offset().left - $(this).offset().left);
                     let leftOffsetCurrentItem = $logo.offset().left - $(this).offset().left;
                     console.log($logo.offset().left);
@@ -26,18 +26,17 @@
                     let calculateLeftCss = ((1140 - menuWidth) / 2) + leftOffsetCurrentItem;
 
                     $(this).css('left', calculateLeftCss);
+                } else {
+                    // console.log($logo.offset().left - $(this).offset().left);
+                    let leftOffsetCurrentItem = $logo.offset().left - $(this).offset().left;
+                    // console.log($logo.offset().left);
+                    // console.log($(this).parent().offset().left);
+                    // console.log($(this).parent());
+                    let calculateLeftCss = (($deviceWidth - menuWidth) / 2) + leftOffsetCurrentItem - 30;
+
+                    $(this).css('left', calculateLeftCss);
                 }
-            } else {
-                // console.log($logo.offset().left - $(this).offset().left);
-                let leftOffsetCurrentItem = $logo.offset().left - $(this).offset().left;
-                // console.log($logo.offset().left);
-                // console.log($(this).parent().offset().left);
-                // console.log($(this).parent());
-                let calculateLeftCss = (($deviceWidth - menuWidth) / 2) + leftOffsetCurrentItem - 30;
-
-                $(this).css('left', calculateLeftCss);
             }
-
         });
     }
 

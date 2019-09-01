@@ -54,7 +54,7 @@
     }
 
     // responsive styles
-    @include breakpoint(md) {
+    @include breakpoint-fluid(1024px) {
         position: static;
         top: 0;
         visibility: visible;
@@ -72,7 +72,7 @@
     display: block;
 
     // responsive styles
-    @include breakpoint(md) {
+    @include breakpoint-fluid(1024px) {
         @include d(f);
         @include jc(fe);
         @include ai(c);
@@ -88,7 +88,7 @@
     cursor: pointer;
 
     // responsive styles
-    @include breakpoint(md) {
+    @include breakpoint-fluid(1024px) {
         width: auto;
         display: inline-block;
         font-weight: 400;
@@ -104,7 +104,7 @@
         }
 
         // responsive styles
-        @include breakpoint(md) {
+        @include breakpoint-fluid(1024px) {
             padding: 0 15px;
         }
     }
@@ -126,7 +126,7 @@
         }
 
         // responsive styles
-        @include breakpoint(md) {
+        @include breakpoint-fluid(1024px) {
             //position: absolute;
             //right: -2px;
             //top: 0;
@@ -144,7 +144,7 @@
         @include fw(wrap);
 
         // responsive styles
-        @include breakpoint(md) {
+        @include breakpoint-fluid(1024px) {
             width: auto;
             padding-right: 5px;
             //@include d(ib);
@@ -167,22 +167,38 @@
         will-change: opacity, visibility, top;
 
         // responsive styles
-        @include breakpoint(md) {
+        @include breakpoint-fluid(1024px) {
             width: auto;
             max-width: 350px;
         }
 
         &--mega {
-            min-width: 60px;
-            max-width: 94vw;
-            width: 1140px;
             left: 0;
             // delete these
-            opacity: 1;
-            visibility: visible;
+            //opacity: 1;
+            //visibility: visible;
+
+            @include breakpoint-fluid(1024px) {
+                min-width: 60px;
+                max-width: 94vw;
+                width: 1140px;
+            }
 
             @include breakpoint-fluid(1140px) {
                 max-width: 98vw;
+            }
+
+            &.what-we-do {
+                // delete these
+                //opacity: 1;
+                //visibility: visible;
+
+                @include breakpoint-fluid(1024px) {
+                    left: -200px !important;
+                    min-width: 60px;
+                    max-width: 94vw;
+                    width: 600px;
+                }
             }
         }
 
@@ -198,7 +214,7 @@
             visibility: visible;
 
             // responsive styles
-            @include breakpoint(md) {
+            @include breakpoint-fluid(1024px) {
                 top: 40px;
             }
         }
@@ -208,7 +224,7 @@
             transform: rotate(-180deg);
 
             // responsive styles
-            @include breakpoint(md) {
+            @include breakpoint-fluid(1024px) {
                 transform: rotate(0);
             }
         }
@@ -226,7 +242,7 @@
         padding: 10px 7.5px;
     }
     // responsive styles
-    @include breakpoint(md) {
+    @include breakpoint-fluid(1024px) {
         display: none;
     }
 }
@@ -236,7 +252,7 @@
     display: none;
 
     // responsive styles
-    @include breakpoint(md) {
+    @include breakpoint-fluid(1100px) {
         display: block;
         padding-left: 10px;
     }
@@ -301,6 +317,84 @@
         p {
             font-size: 15px;
             opacity: .6;
+        }
+    }
+}
+
+// responsive styles - megamenu
+@media screen and (max-width: 1023px) {
+    .dd-menu--mega {
+        padding: 10px 20px !important;
+
+        .ii_icon,
+        .heading {
+            display: none !important;
+        }
+
+        .icons {
+            padding: 0;
+        }
+
+        .icons__item {
+            width: 100%;
+            @include d(f);
+            @include fw;
+            margin: 0;
+        }
+
+        .title--sec {
+            font-size: 16px !important;
+            padding: 6px 0;
+            font-weight: 400;
+            font-family: $font-heading;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    // what we do
+    .what-we-do {
+
+        .ii_icon {
+            display: block !important;
+
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .what-we-do {
+        .ii_icon {
+            width: 100%;
+            @include d(f);
+            @include ai(c);
+            @include fw;
+
+            img {
+                width: 20px;
+                margin-right: 10px;
+            }
+        }
+
+        .ii__info {
+            margin-top: 7px;
+        }
+
+        .heading {
+            width: 45%;
+        }
+
+        .icons {
+            width: 55%;
+
+            &__item {
+                width: 100%;
+            }
         }
     }
 }

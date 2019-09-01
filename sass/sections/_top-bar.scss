@@ -2,7 +2,7 @@
     padding: 20px 0 0px 0;
     display: none;
 
-    @include breakpoint(md) {
+    @include breakpoint-fluid(1024px) {
         display: block;
     }
 
