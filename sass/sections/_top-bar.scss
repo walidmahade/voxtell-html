@@ -5,6 +5,10 @@
     @include breakpoint(md) {
         display: block;
     }
+
+    .container {
+        max-width: 1140px;
+    }
 }
 
 .header-numbers {

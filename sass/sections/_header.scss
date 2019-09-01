@@ -8,6 +8,10 @@
         padding: 10px;
     }
 
+    .container {
+        max-width: 1140px;
+    }
+
     .row {
         @include d(f);
         @include jc(sb);
@@ -106,7 +110,7 @@
     }
 
     &--active {
-        a {
+        & > a {
             color: #b7b7b7;
         }
     }
@@ -115,14 +119,20 @@
         padding-top: 6px;
         transition: transform 0.3s ease-in-out;
         will-change: transform;
+        width: 20px;
+
+        svg {
+            height: 20px;
+        }
 
         // responsive styles
         @include breakpoint(md) {
-            position: absolute;
-            right: -2px;
-            top: 0;
+            //position: absolute;
+            //right: -2px;
+            //top: 0;
             // transform: translateY(-50%);
-            padding: 0;
+            //padding: 0;
+            margin-left: -15px;
         }
     }
 
@@ -137,7 +147,7 @@
         @include breakpoint(md) {
             width: auto;
             padding-right: 5px;
-            @include d(ib);
+            //@include d(ib);
         }
     }
 
@@ -152,11 +162,32 @@
         visibility: hidden;
         z-index: 9;
         @include bs(0, 6px, 14px, 1px, rgba(#000, 0.08));
+        @include br;
         transition: all 0.3s ease-in-out;
         will-change: opacity, visibility, top;
 
+        // responsive styles
+        @include breakpoint(md) {
+            width: auto;
+            max-width: 350px;
+        }
+
+        &--mega {
+            min-width: 60px;
+            max-width: 94vw;
+            width: 1140px;
+            left: 0;
+            // delete these
+            opacity: 1;
+            visibility: visible;
+
+            @include breakpoint-fluid(1140px) {
+                max-width: 98vw;
+            }
+        }
+
         a {
-            padding: 3px 0;
+            padding: 6px 0;
         }
     }
 
@@ -168,7 +199,7 @@
 
             // responsive styles
             @include breakpoint(md) {
-                top: 135%;
+                top: 40px;
             }
         }
 
@@ -208,5 +239,68 @@
     @include breakpoint(md) {
         display: block;
         padding-left: 10px;
+    }
+}
+
+
+// ---------------------------- mega menu inner
+.dd-menu--mega {
+    @include d(f);
+    @include jc(sb);
+    @include ac(c);
+    @include ai(stretch);
+    @include fw;
+    padding: 0 !important;
+    font-family: $font-family;
+
+    .heading {
+        width: 25%;
+        padding: 30px;
+        border-right: 1px solid #eeeeee;
+        @include d(f);
+        @include jc(c);
+        @include ac(fs);
+        @include ai(fs);
+        justify-items: center;
+        flex-direction: column;
+
+        .title--sec {
+            font-size: 30px;
+        }
+
+        .para {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    }
+
+    .icons {
+        width: 75%;
+        @include d(f);
+        @include jc(fs);
+        @include ai(c);
+        @include ac(c);
+        @include fw;
+        padding: 30px;
+
+        &__item {
+            width: 33%;
+            @include d(f);
+            @include fw;
+            margin: 25px 0;
+        }
+
+        .ii_icon {
+            margin-right: 10px;
+        }
+
+        .title--sec {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 15px;
+            opacity: .6;
+        }
     }
 }
