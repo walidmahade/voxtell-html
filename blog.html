@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*---------------------
+        Latest Post Css
+        ---------------------*/
+        .latest_post {
+            display: flex;
+            justify-content: center;
+            flex-flow: row wrap;
+            color: #fff;
+        }
+
+        .post-thumbnail,
+        .post-content {
+            width: 50%;
+            flex: 1 0;
+            padding: 80px 120px 80px 80px;
+        }
+
+        .post-thumbnail {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .post-content {
+            background-image: linear-gradient(to right, #fcb614 0%, #cb2d2c 100%);
+        }
+
+        .post-excerpt,
+        .post-title {
+            font-family: "omnes-semicond", Sans-serif;
+        }
+
+        .post-excerpt,
+        .post-publish-date {
+            font-size: 22px;
+        }
+
+        .post-excerpt {
+            margin-bottom: 15px;
+        }
+
+        .post-title a,
+        .mw-btn {
+            color: #ffffff;
+        }
+
+        .post-title a {
+            font-size: 40px;
+        }
+
+        .post-publish-date {
+            font-family: "Montserrat Alternates";
+        }
+
+        .mw-btn {
+            border-radius: 5px;
+            border: 2px solid #ffffff;
+            adding: 11px 20px;
+            font-family: "Montserrat Alternates";
+            display: inline-block;
+            padding: 11px 28px;
+            font-weight: 600;
+            font-size: 18px;
+            transform: scale(1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .mw-btn:hover {
+            background-color: #cb2d2c;
+            border-color: #cb2d2c;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* responsive styles */
+        @media screen and (max-width: 991px) {
+            .latest_post {
+                flex-wrap: wrap !important;
+                flex-direction: column;
+            }
+
+            .post-thumbnail,
+            .post-content {
+                width: 100% !important;
+            }
+
+            .post-thumbnail {
+                padding: 160px 0;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .post-thumbnail {
+                padding: 105px 0;
+            }
+
+            .post-content {
+                padding: 36px 23px;
+                text-align: center;
+            }
+
+            .post-publish-date {
+                font-size: 18px;
+            }
+
+            .post-title a {
+                font-size: 28px;
+            }
+
+            .post-excerpt {
+                font-size: 16px;
+            }
+            .mw-btn {
+                padding: 8px 20px;
+                font-size: 13px;
+            }
+        }
+    </style>
+
+    <style>
+        /*blog grid css*/
+        selector .alm-reveal {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        selector .mw-post-grid-item {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        selector .mw-post-grid-item > img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        selector .elementor-post__title {
+            font-size: 28px;
+            color: #000;
+            font-family: "omnes-semicond", Sans-serif;
+        }
+
+        selector .elementor-post__read-more {
+            color: #ffffff;
+            font-family: "Montserrat Alternates";
+            font-size: 17px;
+            font-weight: 500;
+            border-radius: 5px;
+            background-image: linear-gradient(to right, #fcb614 0%, #cb2d2c 100%);
+            padding: 12px;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            transform: scale(1);
+            transition: all .3s ease-in-out;
+        }
+
+        selector .elementor-post__read-more:hover {
+            background-image: linear-gradient(to right, #cb2d2c 0%, #cb2d2c 100%);
+            transform: scale(1.1);
+        }
+
+        selector .entry-meta {
+            font-family: "Montserrat Alternates";
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        /*--------------------
+            load more button
+        ---------------------*/
+        .alm-btn-wrap {
+            text-align: center;
+        }
+
+        .alm-load-more-btn {
+            border: 0;
+            color: #000;
+            font-size: 25px;
+        }
+
+        .alm-load-more-btn:hover {
+            background-color: transparent !important;
+            color: #000;
+            cursor: pointer;
+        }
+
+        /* // disabled state */
+        .alm-load-more-btn:disabled {
+            opacity: 0;
+        }
+        .alm-load-more-btn.loading {
+            background-color: transparent !important;
+            color: #000 !important;
+        }
+
+        .alm-load-more-btn img {
+            display: block;
+            margin: 10px auto 0 auto;
+            transform: translateY(0);
+            transition: 0.3s ease-in-out;
+        }
+
+        .alm-load-more-btn:hover img {
+            transform: translateY(10px);
+        }
+
+
+
+        /* responsive styles */
+        @media screen and (max-width: 991px) {
+            selector .mw-post-grid-item {
+                width: 42%;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            selector .alm-reveal {
+                justify-content: space-around;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            selector .mw-post-grid-item {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            selector .entry-meta {
+                font-size: 17px;
+            }
+
+            selector .elementor-post__title {
+                font-size: 25px;
+            }
+
+            selector .elementor-post__read-more {
+                font-size: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+</body>
+</html>
