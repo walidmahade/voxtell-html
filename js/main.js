@@ -10,31 +10,41 @@
 
     // ----------------------------------- megamenu positioning
     function calculateMegamenuPosition() {
-        $( ".dd-menu--mega" ).each( function( index ) {
+        $(".dd-menu--mega").each(function(index) {
             // console.log( index + ": " + $(this).innerWidth() );
-            $(this).css('left', 0);
+            $(this).css("left", 0);
 
             let menuWidth = $(this).innerWidth();
 
             if (menuWidth > 900) {
                 if ($deviceWidth > 1140) {
                     console.log($logo.offset().left - $(this).offset().left);
-                    let leftOffsetCurrentItem = $logo.offset().left - $(this).offset().left;
+                    let leftOffsetCurrentItem =
+                        $logo.offset().left - $(this).offset().left;
                     console.log($logo.offset().left);
-                    console.log($(this).parent().offset().left);
+                    console.log(
+                        $(this)
+                            .parent()
+                            .offset().left
+                    );
                     // console.log($(this).parent());
-                    let calculateLeftCss = ((1140 - menuWidth) / 2) + leftOffsetCurrentItem;
+                    let calculateLeftCss =
+                        (1140 - menuWidth) / 2 + leftOffsetCurrentItem;
 
-                    $(this).css('left', calculateLeftCss);
+                    $(this).css("left", calculateLeftCss);
                 } else {
                     // console.log($logo.offset().left - $(this).offset().left);
-                    let leftOffsetCurrentItem = $logo.offset().left - $(this).offset().left;
+                    let leftOffsetCurrentItem =
+                        $logo.offset().left - $(this).offset().left;
                     // console.log($logo.offset().left);
                     // console.log($(this).parent().offset().left);
                     // console.log($(this).parent());
-                    let calculateLeftCss = (($deviceWidth - menuWidth) / 2) + leftOffsetCurrentItem - 30;
+                    let calculateLeftCss =
+                        ($deviceWidth - menuWidth) / 2 +
+                        leftOffsetCurrentItem -
+                        30;
 
-                    $(this).css('left', calculateLeftCss);
+                    $(this).css("left", calculateLeftCss);
                 }
             }
         });
@@ -42,7 +52,6 @@
 
     // calculateMegamenuPosition();
     setTimeout(calculateMegamenuPosition, 800);
-
 
     // ----------------------------------- mobile menu open close
     $menuTriggerMobile.click(function() {
@@ -94,13 +103,17 @@
     });
 
     // ------------------------------------------------ widget accordion
-    const $accdnItem = $(".accdn__item");
+    // const $accdnItem = $(".accdn__item");
+    const $accdnItemTitle = $(".accdn__title");
 
-    $accdnItem.click(function() {
+    $accdnItemTitle.click(function() {
         $(this)
+            .parent()
             .siblings()
             .removeClass("accdn__item--active");
-        $(this).toggleClass("accdn__item--active");
+        $(this)
+            .parent()
+            .toggleClass("accdn__item--active");
     });
 
     /*========================================================
@@ -133,12 +146,12 @@
     /*========================================================
         modals
     =========================================================*/
-    $(".info-modal-trigger").click(function (e) {
+    $(".info-modal-trigger").click(function(e) {
         e.preventDefault();
         openModal();
     });
 
-    $(".close").click(function (e) {
+    $(".close").click(function(e) {
         e.preventDefault();
         closeModal();
     });
@@ -153,8 +166,8 @@
     /*--------------------------------------------------*/
     /*-------------------------widnow resize functions-------------------------*/
     /*--------------------------------------------------*/
-    $(window).on('resize', function () {
+    $(window).on("resize", function() {
         // reposition megamenu
         calculateMegamenuPosition();
-    })
+    });
 })(jQuery);

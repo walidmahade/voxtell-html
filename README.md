@@ -6,7 +6,8 @@ Temporary skipped pages
 2.  Voxtell Pricing
 3.  Blog
 
-----------------------
+---
+
 video light box
 header
 remaining pages
@@ -31,5 +32,15 @@ https://voxtell.netlify.com/why-voxtell.html
 
 # wordpress version new changes
 
-1. home our sol section image update -  mobile
-2.
+1. home our sol section image update - mobile
+2. Revisit speed optimization
+3. Solutions Page Text not editable
+
+Q: Do you want two images or one single image for backgrounds?
+Q: Forms integration will be done with contact form 7
+
+/_-------------------------------------------------------_/
+content needed from J.S
+
+1. Faq page faq
+2. CAreer page faq
