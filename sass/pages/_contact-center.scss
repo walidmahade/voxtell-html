@@ -1,0 +1,72 @@
+.bg-orange {
+    background-color: #f29919 !important;
+}
+.hero-notext.voxtell-contact-center {
+    background-image: url(../images/bg-call-center.jpg);
+}
+
+#vcc-price-plans {
+    @include bg-grad;
+    background-position: center right;
+    background-size: cover;
+    padding-bottom: 180px;
+    position: relative;
+
+    // responsive styles
+    @include breakpoint(md) {
+        background-image: url(../images/what-we-do-contact-bg.jpg);
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    .title--sec {
+        color: #fff;
+    }
+}
+
+.vb-price-boxes-row {
+    position: relative;
+    padding-top: 65px;
+    width: 100%;
+
+    .vb-price-box {
+        position: relative;
+        margin-top: 45px;
+    }
+
+    .box {
+        position: relative;
+        min-width: 400px;
+        width: auto;
+        padding: 45px 30px;
+        margin: 0 21px;
+        z-index: 9;
+    }
+
+    .title--alt {
+        font-weight: 500;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .title--big {
+        font-weight: 500;
+        font-family: $font-heading;
+    }
+
+    .para {
+        margin: 20px 0 35px 0;
+        line-height: 1;
+    }
+
+    .cta {
+        text-align: center;
+
+        .btn {
+            margin: 0 auto;
+        }
+    } // cta
+}

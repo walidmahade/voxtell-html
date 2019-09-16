@@ -1,36 +1,15 @@
-.voxtell-business {
-    .hero-notext {
-        background-image: url("../images/what-we-do-phone-service-hero3.jpg");
+#pbx-trunk-hro {
+    background-image: url("../images/post-images/bg-pbx-sip-trunking.jpg");
+}
+
+#pbx-under-hero {
+    .title--alt {
+        margin-bottom: 15px;
     }
 
     .row.cta {
         margin-top: 45px;
-        text-align: center;
         justify-content: center;
-    }
-
-    .products-grid {
-        position: relative;
-        padding-bottom: 0;
-
-        .header {
-            margin-bottom: 45px;
-
-            .para--subt {
-                font-weight: 400;
-                font-size: 26px;
-            }
-        }
-    }
-
-    .section--last {
-        padding-top: 25px;
-    }
-}
-
-#vb-under-hero {
-    .title--alt {
-        margin-bottom: 15px;
     }
 
     .left-col {
@@ -58,7 +37,7 @@
     color: #fff;
     padding: 40px;
     text-align: center;
-    background-color: $dark;
+    background-color: #d13f29;
     background-image: url(../images/business-phone-service-hero-box-dots.png);
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -78,16 +57,16 @@
 
 // -------------------------------------------------------------
 // -------------------------------------------------------------
-#vb-price-plans {
+#pbx-price-plans {
     @include bg-grad;
-    background-position: bottom right;
+    background-position: center center;
     background-size: cover;
     padding-bottom: 150px;
     position: relative;
 
     // responsive styles
     @include breakpoint(md) {
-        background-image: url(../images/bg-phone-services.jpg);
+        background-image: url(../images/what-we-do-contact-bg.jpg);
     }
 
     .row {
@@ -99,7 +78,7 @@
     }
 }
 
-.vb-price-boxes-row {
+.pbx-price-boxes-row {
     position: relative;
     padding-top: 65px;
     width: 100%;
@@ -207,17 +186,7 @@
                 }
 
                 &:after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    height: 5px;
-                    background: #cc302b;
-                    opacity: 0.8;
-                    width: 56px;
-                    transform: rotate(-30deg);
-                    transform-origin: 0% 0%;
-                    border-radius: 5px;
-                    left: 15px;
+                    content: none;
                 } // :: after
             } // num
 
@@ -227,4 +196,27 @@
             }
         } // price
     } // cta
+}
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+#pbx-supp-icons {
+    .row.icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: 65px auto 0 auto;
+
+        .icon__item {
+            width: 33.33%;
+            padding: 15px;
+
+            @include breakpoint(md) {
+                width: 23.5%;
+            }
+        }
+    }
 }
