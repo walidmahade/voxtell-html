@@ -9,6 +9,7 @@
         $logo = $(".brand");
 
     // ----------------------------------- megamenu positioning
+    /*
     function calculateMegamenuPosition() {
         $(".dd-menu--mega").each(function(index) {
             // console.log( index + ": " + $(this).innerWidth() );
@@ -49,9 +50,12 @@
             }
         });
     }
+    
 
     // calculateMegamenuPosition();
     setTimeout(calculateMegamenuPosition, 800);
+
+*/
 
     // ----------------------------------- mobile menu open close
     $menuTriggerMobile.click(function() {
@@ -166,8 +170,8 @@
     /*--------------------------------------------------*/
     /*-------------------------widnow resize functions-------------------------*/
     /*--------------------------------------------------*/
-    $(window).on("resize", function() {
-        // reposition megamenu
-        calculateMegamenuPosition();
-    });
+    // $(window).on("resize", function() {
+    // reposition megamenu
+    // calculateMegamenuPosition();
+    // });
 })(jQuery);

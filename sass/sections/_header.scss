@@ -188,6 +188,10 @@
                 max-width: 98vw;
             }
 
+            &.solutions {
+                left: -423px;
+            }
+
             &.what-we-do {
                 // delete these
                 //opacity: 1;
@@ -258,7 +262,6 @@
     }
 }
 
-
 // ---------------------------- mega menu inner
 .dd-menu--mega {
     @include d(f);
@@ -316,7 +319,7 @@
 
         p {
             font-size: 15px;
-            opacity: .6;
+            opacity: 0.6;
         }
     }
 }
@@ -356,7 +359,6 @@
 
     // what we do
     .what-we-do {
-
         .ii_icon {
             display: block !important;
 

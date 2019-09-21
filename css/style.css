@@ -465,6 +465,8 @@ select { background-color: #fff; border: 1px solid #a7a9ac; -webkit-border-radiu
 
 @media (min-width: 1140px) { .menu-item .dd-menu--mega { max-width: 98vw; } }
 
+.menu-item .dd-menu--mega.solutions { left: -423px; }
+
 @media (min-width: 1024px) { .menu-item .dd-menu--mega.what-we-do { left: -200px !important; min-width: 60px; max-width: 94vw; width: 600px; } }
 
 .menu-item .dd-menu a { padding: 6px 0; }
@@ -501,7 +503,7 @@ select { background-color: #fff; border: 1px solid #a7a9ac; -webkit-border-radiu
 
 .dd-menu--mega .icons .title--sec { font-size: 20px; }
 
-.dd-menu--mega .icons p { font-size: 15px; opacity: .6; }
+.dd-menu--mega .icons p { font-size: 15px; opacity: 0.6; }
 
 @media screen and (max-width: 1023px) { .dd-menu--mega { padding: 10px 20px !important; }
   .dd-menu--mega .ii_icon, .dd-menu--mega .heading { display: none !important; }
