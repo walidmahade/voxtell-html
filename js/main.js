@@ -50,7 +50,7 @@
             }
         });
     }
-    
+
 
     // calculateMegamenuPosition();
     setTimeout(calculateMegamenuPosition, 800);
